@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <title>userList page</title>
+    
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>NAME</td>
+                <td>PASSWORD</td>
+            </tr>
+            {{range $k, $v := .user}}
+            <tr>
+                <td>{{$v.Id}}</td>
+                <td>{{$v.Name}}</td>
+                <td>{{$v.Password}}</td>
+            </tr>
+            {{end}}
+        </table>
+        <a href="/">返回</a>
+    </body>
+</html>

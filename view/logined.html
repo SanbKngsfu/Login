@@ -1,0 +1,22 @@
+<html>
+    <head>
+    <title>logined page</title>
+    
+    </head>
+    <body>
+        {{if .err_msg}}
+        {{.err_msg}}
+        <h3>logined failed</h3>
+        {{end}}
+
+        {{if .user}}
+        <h3>logined success</h3>
+        <p>id:{{.user.Id}}</p>
+        <p>name:{{.user.Name}}</p>
+        <p>password:{{.user.Password}}</p>
+        {{end}}
+
+        <a href="/">返回</a>
+        <a href="/userList.do">list</a>
+    </body>
+</html>
